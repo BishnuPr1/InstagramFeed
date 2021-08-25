@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Instagram</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .navbar {
+            height: 55px;
+            position: fixed;
+            top: 0;
+            background-color: white;
+            border: 1px solid rgb(220, 220, 220);
+            width: 100%;
+        }
+
+        .nav-content {
+            padding: 0px 20px;
+            height: 55px;
+            width: 100%;
+        }
+
+        .logo {
+            margin-right: 22%;
+        }
+
+        .nav-search {
+            height: 30px;
+            width: 200px;
+            border: 1px solid rgb(220, 220, 220);
+            text-indent: 40%;
+            border-radius: 3px;
+            background-color: #fafafa;
+            margin-right: 110px;
+        }
+
+        .nav-icons {
+            margin-right: 15px;
+            font-size: 27px;
+            color: #444444;
+        }
+
+        .stories-box {
+            width: 600px;
+            height: 90px;
+            background-color: white;
+            border: 1px solid rgb(220, 220, 220);
+            border-radius: 3px;
+            margin-top: 90px;
+            margin-left: 20%;
+            padding: 10px;
+        }
+
+        .story {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .story-image {
+            border-radius: 50%;
+        }
+
+        .story-username {
+            font-size: 14px;
+            color: rgb(69, 69, 69);
+            margin-top: 5px;
+        }
+
+        .post-card{
+            margin-top: 20px;
+            border: 1px solid rgb(220, 220, 220);
+            border: 3px;
+            background-color: white;
+            width: 600px;
+            margin-left: 20%;
+            padding: 32px 10px 32px;
+        }
+        .post-profile-image{
+            border-radius: 50%;
+            height: 32px;
+            width: 32px;
+        }
+        .post-title{
+            display: flex;
+            align-items:center;
+        }
+        .post-title-details{
+                 margin-left: 10px;
+                 display: flex;
+                 flex-direction: column;
+        }
+
+         .post-username{
+             font-weight: 600;
+             font-size: 14px;
+
+         } 
+         .post-location{
+            font-size: 12px;
+            color: rgb(96, 96, 96);
+         } 
+         .post-image{
+             width: 100%;
+             margin-top: 15px;
+           
+         } 
+         .like-image{
+            border-radius: 50%;
+         }
+         .material-icons-outlined{
+           font-size: 20px;
+           margin-top: 0;
+           color: rgb(53,53,53);
+         } 
+         .post-icons {
+            font-size: 27px;
+            margin-top: 10px;
+            color: rgb(53, 53, 53);
+            font-weight: 100;
+            padding: 4px;
+        }
+         .right-icon{
+             margin-left: 78%;
+         }
+         .post-time{
+             font-size: 55%;
+             padding-top: 5px;   
+         }
+         .new-comment-input{
+            border: none;
+            margin-left: 10px;
+            } 
+            .new-comment {
+            display: flex;
+            align-items: center;
+        } 
+        .btn-position {
+            position: relative;
+            color: rgb(0,149,246);
+            margin-left: 62%;
+            border: 0;
+            background-color: transparent;
+        }  
+        .post-text{
+            position: absolute;
+            color: rgb(0,149,246);
+            margin-left: 22%;
+            font-size: 13px;  
+        }
+        .left{
+            float: left;
+        }
+        <!--Side container -->
+
+         .rt{
+            display:flex;
+            width:250px;
+            position:fixed;
+
+         }
+
+      
+        .suggestion-image{
+            border-radius: 50%;
+            width: 30px;
+            margin-bottom: 5px;
+        }
+        .follow-status{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: rgb(113, 112, 112);
+            padding-left: 5%;
+
+        }
+        .suggestions-box{
+            padding: 50px 10px 20px 200px;
+            margin: 10px 10px 20px 100px;
+            right:50%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar flex">
+        <div class="nav-content flex">
+            <img class="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
+            <input class="nav-search" type="text" placeholder="Search">
+            <div>
+                <span class="material-icons nav-icons">home</span>
+                <span class="material-icons-outlined nav-icons">chat</span>
+                <span class="material-icons-outlined nav-icons">explore</span>
+                <span class="material-icons-outlined nav-icons">favorite_border</span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- LEFT SIDE STARTS -->
+        <div class="left">
+            <div class="stories-box flex">
+                <!-- One story -->
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=1234">
+                    <span class="story-username">pune_times</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=12341">
+                    <span class="story-username">disney-plus</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=12342">
+                    <span class="story-username">masaischool</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=12343">
+                    <span class="story-username">animalwalefare</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=12344">
+                    <span class="story-username">hotstart_</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=12346">
+                    <span class="story-username">cool_guy</span>
+                </div>
+            </div>
+            <!--Post card-->
+            <div class="post-card">
+                <div class="post-title">
+                    <img class="post-profile-image" src="https://i.pravatar.cc/56?u=999" alt="post-profile-image">
+                    <span class="post-title-details">
+                        <span class="post-username">punetimes</span>
+                        <span class="post-location">Pune City</span>
+                    </span>
+                </div>
+                <!--Post image-->
+                <div>
+                    <img class="post-image" src="https://images.pexels.com/photos/5732839/pexels-photo-5732839.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                </div>
+
+                <!--image details-->
+                <div class="interaction">
+                    <span class="material-icons-outlined post-icons">favorite_border</span>
+                    <span class="material-icons-outlined post-icons">chat_bubble_outline</span>
+                    <span class="material-icons-outlined post-icons"></span>
+                    <span class="material-icons-outlined post-icons right-icon">bookmark_border</span>
+                </div>
+                <div class="stats">
+                    <img class="like-image" src="https://i.pravatar.cc/16?u=667" alt="img">Liked by <strong>amar_s</strong> and <strong>1,511 others</strong>
+                </div>
+                <div class="desc"></div>
+                <div class="view-all-comments">View all 10 comments</div>
+                <div class="comment"><strong>raj_m</strong> 😍😍😍</div>
+                <div class="comment"><strong>sam_eer</strong> Nice</div>
+                <div class="post-time">5 HOURS AGO</div>
+                <hr>
+                <div class="new-comment">
+                    <span class="material-icons-outlined">sentiment_satisfied</span>
+                    <input class="new-comment-input" type="text" placeholder="Add a comment...">
+                    <button class="btn-position">Post</button>    
+                </div>
+            </div>
+            <div class="post-card">
+                <div class="post-title">
+                    <img class="post-profile-image" src="https://i.pinimg.com/474x/49/76/7f/49767f9e7c94438cf35d9c720849f0ac.jpg" alt="post-profile-image">
+                    <span class="post-title-details">
+                        <span class="post-username">ajay_malhotra</span>
+                        <span class="post-location">Mumbai</span>
+                    </span>
+                </div>
+                <!--Post image-->
+                <div>
+                    <img class="post-image" src="https://images.pexels.com/photos/2499744/pexels-photo-2499744.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                </div>
+
+                <!--image details-->
+                <div class="interaction">
+                    <span class="material-icons-outlined post-icons">favorite_border</span>
+                    <span class="material-icons-outlined post-icons">chat_bubble_outline</span>
+                    <span class="material-icons-outlined post-icons"></span>
+                    <span class="material-icons-outlined post-icons right-icon">bookmark_border</span>
+                </div>
+                <div class="stats">
+                    <img class="like-image" src="https://i.pravatar.cc/16?u=667" alt="img">Liked by <strong>nai_na</strong> and <strong>3,511 others</strong>
+                </div>
+                <div class="desc"></div>
+                <div class="view-all-comments">View all 115 comments</div>
+                <div class="comment"><strong>nobody_</strong> 😍😍😍</div>
+                <div class="comment"><strong>sparkling_star</strong> Nice one</div>
+                <div class="post-time">8 HOURS AGO</div>
+                <hr>
+                <div class="new-comment">
+                    <span class="material-icons-outlined">sentiment_satisfied</span>
+                    <input class="new-comment-input" type="text" placeholder="Add a comment...">
+                    <button class="btn-position">Post</button>      
+                </div>
+            </div>
+        </div>
+
+        <!-- LEFT SIDE ENDS -->
+       
+        <!-- SIDE CONTAINER -->
+        <div class="right-container">
+            <div class="rt">
+            <div switch-profile>
+                <img class="suggestion-image" src="https://www.theattitudequotes.com/wp-content/uploads/2021/05/INSTAGRAM-Dp-4.jpg" alt="">
+            </div>
+            <div class="suggestions-box">
+                <span class=>Suggestions for you</span>
+                <span><strong>See all</strong></span>
+
+                <div class="suggestions">
+                    
+                    <img class="suggestion-image" src="https://upleap.com/blog/wp-content/uploads/2018/10/how-to-create-the-perfect-instagram-profile-picture.jpg">
+                    <span class="post-text">Follow</span>
+                    <span class="suggestion-username"><strong>DanielE</strong></span><br>
+                    <span class="follow-status">Follows you</span>
+                    
+                </div> 
+                <div class="suggestions">
+                    <img class="suggestion-image" src="https://www.theattitudequotes.com/wp-content/uploads/2021/02/New-DP-for-instagram-Profile-Pictures-Download-2021-DP-For-Insta-30.jpg">
+                    <span class="post-text">Follow</span>
+                    <span class="suggestion-username"><strong>ForceBar</strong></span><br>
+                    <span class="follow-status">Follows you</span>
+                    
+                </div>
+                <div class="suggestions">
+                    <img class="suggestion-image" src="https://i.pinimg.com/originals/25/4b/04/254b0457df2facf12b95d749117aaabc.jpg">
+                    <span class="post-text">Follow</span>
+                    <span class="suggestion-username"><strong>Salamantis</strong></span><br>
+                    <span class="follow-status">Followed by mrlaw + 1 more</span>
+                   
+                </div>
+                <div class="suggestions">
+                    <img class="suggestion-image" src="https://www.best4geeks.com/wp-content/uploads/2018/08/17-boy-hat-smoking-instagram-profile-picture-1.jpg">
+                    <span class="post-text">Follow</span>
+                    <span class="suggestion-username"><strong>RayPen</strong></span><br>
+                    <span class="follow-status">Followed by mrlaw + 10 more</span>
+                    
+                </div>
+                <div class="suggestions">
+                    <img class="suggestion-image" src="https://anthonycarbonepersonalinjurylawyer.com/wp-content/uploads/2018/06/shutterstock_126920099.jpg">
+                    <span class="post-text">Follow</span>
+                    <span class="suggestion-username"><strong>JohnDoe</strong></span><br>
+                    <span class="follow-status">Follows you</span>
+                    
+               
+             </div>      
+         </div>
+         </div>
+        </div>
+        <!-- SIDE CONTAINER -->
+    </main>
+</body>
+</html>
